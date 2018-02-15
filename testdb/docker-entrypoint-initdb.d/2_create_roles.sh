@@ -1,0 +1,10 @@
+CREATE SCHEMA nl AUTHORIZATION dbadmin;
+ALTER DATABASE nuleaf SET search_path = nl,public;
+
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
+
+CREATE USER nl_app PASSWORD 'testpass' IN ROLE nl_user;
+
+GRANT ALL ON SCHEMA nl TO nl_app;
+
+GRANT ALL ON ALL TABLES IN SCHEMA nl TO nl_app;

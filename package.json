@@ -1,0 +1,39 @@
+{
+  "name": "example-node-server",
+  "version": "0.1.0",
+  "description": "Example Node Server w/ Babel",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "nodemon lib/index.js --exec babel-node --presets es2015,stage-2",
+    "build": "babel lib -d dist",
+    "serve": "node dist/index.js",
+    "test": "mocha --compilers js:babel-register"
+  },
+  "author": "Clinton Medbery",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "babel-cli": "^6.11.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-2": "^6.11.0",
+    "babel-register": "^6.11.6",
+    "mocha": "^3.0.1",
+    "nodemon": "^1.10.0"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.1",
+    "jwt-simple": "^0.5.1",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.1",
+    "passport-local": "^1.0.0",
+    "pg": "^7.4.1",
+    "rimraf": "^2.6.2",
+    "sequelize": "^4.31.2",
+    "sequelize-cli": "^3.2.0"
+  }
+}
