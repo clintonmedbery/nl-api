@@ -2,10 +2,22 @@
 
 ### Getting Started
 
+#### Setup Test Database
+
+```shell
+$ cd testdb/```
+```shell
+$ docker build -t nu-database .```
+
 #### Install
 ```shell
 $ npm install
 ```
+```shell
+$ npm install -g sequelize-cli```
+
+```shell
+$ sequelize init```
 
 #### Run Migrations
 
